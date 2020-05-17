@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-widht, inital-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" href="./style.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<title>Difle Barrocão - Gincana 2020</title>
+	<script>
+		$(document).ready(function(){
+			function r() {
+					var item = document.createElement("LI");
+					var a = document.createElement("a");
+					a.setAttribute("href", "https://www.youtube.com/?hl=pt&gl=BR")
+					a.setAttribute("target", "_blank")
+					var textItem = document.createTextNode("Water");
+					a.appendChild(textItem);
+					item.appendChild(a);
+					document.getElementById("myList").appendChild(item);
+				}
+			//$(".fisrt").on("click", function(e){
+			//	e.preventDefault();
+				//r();
+			//});
+		});
+	</script>
+</head>
+
+<body>
+
+<h1>Gincana Diflen 2020</h1>
+
+<div id="img" class="center">
+	<img id="image" src="imagens/image.png" usemap="#imageMap"/>
+	<map name="imageMap">
+		<area class="fisrt" shape="rect" coords="45,50,139,65" href="question.html#1" target="janela" >
+		<area shape="rect" coords="56,238,131,253" href="question.html#2" target="janela">
+		<area shape="rect" coords="390,49,503,96" href="question.html#3" target="janela">
+		<!--<area shape="rect" coords="401,234,499,252" href="https://www.youtube.com/?hl=pt&gl=BR" target="janela">-->
+	</map>
+	<iframe  id="frame-question" class="center" src="question.html" scrolling="no" name="janela"></iframe>
+
+	<span>
+	</span>
+
+	
+	<ul id="myList">
+	</ul>
+
+	
+	<script>
+	</script>
+</div>
+</body>
+</html>

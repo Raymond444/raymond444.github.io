@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./questions.css" />
+        
+        <script>
+            $(document).ready(function(){
+                function r() {
+                        var item = document.createElement("LI");
+                        var a = document.createElement("a");
+                        a.setAttribute("href", "https://www.youtube.com/?hl=pt&gl=BR")
+                        a.setAttribute("target", "_blank")
+                        var textItem = document.createTextNode("Water");
+                        a.appendChild(textItem);
+                        item.appendChild(a);
+                        document.getElementById("myList").appendChild(item);
+                    }
+                $(".fisrt").on("click", function(e){
+                	e.preventDefault();
+                    r();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="1">
+            <header>
+                <h3>1°) Verso:</h3>
+                <input class="question" type="text" />
+            </header>
+        </div>
+        <div id="2">
+            <header>
+                <h3>2°) Verso:</h3>
+                <input class="question" type="text" />
+            </header>
+        </div>
+        <div id="3">
+            <header>
+                <h3>3°) Verso:</h3>
+                <input class="question" type="text" />
+            </header>
+        </div>
+
+    </body>
+</html>
