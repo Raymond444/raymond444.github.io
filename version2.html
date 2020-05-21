@@ -7,6 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<link rel="stylesheet" href="./styles/version2.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="./scripts/jquery.rwdImageMaps.min.js"></script>
 	<title>Difle Barrocão - Gincana 2020</title>
 	<script>
 		$(document).ready(function(){
@@ -24,13 +25,32 @@
             function verifyResponses(form) {
 
 			}
-			//$(".option").on("click", function(e){
-			//	e.preventDefault();
-			//	
-			//	var iframe = document.getElementById("frame-question");
-			//	iframe.src = "question.html#question-3"
-			//	iframe.contentWindow.showButton();
-			//});
+
+			function focusOn(questionNumber) {
+				console.log("question-" + questionNumber);
+				var question = document.getElementById("question-" + questionNumber);
+				question.childNodes[1].focus();
+			}
+			
+			//var allArea = $("area");
+			//var i;
+			//for (i = 0; i < allArea.length; i++) {
+			//	allArea[i].addEventListener("click", function(e){
+			//		e.preventDefault();
+			//		
+			//		focusOn(i + 1)
+//
+//					//var iframe = document.getElementById("frame-question");
+//					//iframe.src = "question.html#question-3"
+//					//iframe.contentWindow.showButton();
+//				});
+//			}
+
+			$(".option").on("click", function(e) {
+				e.preventDefault();
+
+				focusOn(e.target.id);
+			});
 		});
 	</script>
 </head>
@@ -42,10 +62,10 @@
 	<div id="main">
 		<div id="div-image">
 			<img id="image" src="imagens/image.png" usemap="#imageMap"/>
-			<map name="imageMap">
-				<area class="option" shape="rect" coords="45,50,139,65" href="question.html#question-1" target="janela" >
-				<area class="option" shape="rect" coords="56,238,131,253" href="question.html#question-2" target="janela" >
-				<area class="option" shape="rect" coords="390,49,503,96" href="question.html#question-3" target="janela" >
+			<map id="map-image" name="imageMap">
+				<area id="1" class="option" shape="rect" coords="45,50,139,65"  href="" >
+				<area id="2" class="option" shape="rect" coords="56,238,131,253" href="" >
+				<area id="3" class="option" shape="rect" coords="390,49,503,96" href="" >
 				<!--<area shape="rect" coords="401,234,499,252" href="https://www.youtube.com/?hl=pt&gl=BR" target="janela">-->
 			</map>
 		</div>
@@ -75,6 +95,6 @@
 			</form>
 		</div>
 	</div>
-
+	<script>$('img[usemap]').rwdImageMaps();</script>
 </body>
 </html>
