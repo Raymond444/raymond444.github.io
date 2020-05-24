@@ -37,10 +37,14 @@ header {
 h1 {
     font-family: 'Jost', sans-serif;
     color: white;
+    font-size: 4em;
 }
 
 #div-image {
     position: relative;
+    width: 90%;
+    height: 100%;
+
 }
 
 #image {
