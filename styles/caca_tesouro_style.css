@@ -98,6 +98,7 @@ form {
 }
 
 .div-info {
+    display: block;
     margin: 0 auto 5% auto;
 }
 
@@ -110,6 +111,12 @@ form {
 }
 */
 
+#question-1,
+#question-2,
+#question-3,
+#question-4 {
+    display: none;
+}
 
 #button {
     padding: 2%;

@@ -25,7 +25,8 @@
 			function focusOn(questionNumber) {
 				console.log("question-" + questionNumber);
 				var question = document.getElementById("question-" + questionNumber);
-				question.childNodes[1].focus();
+				question.style.display = "block";
+				//question.childNodes[1].focus();
 				question.childNodes[1].scrollIntoView();
 			}
 
@@ -53,47 +54,49 @@
 				<area id="4" class="option" shape="rect" coords="1767,591,1906,730" href="">
 			</map>
 		</div>
+
 		<div id="iframe-questions">
+
 			<div class="div-info">
 				<p class="p-form">Responda com as referências bíblicas, de acordo com as dicas abaixo:</p>
 				<p class="p-form">Siga exatamente esse modelo de resposta: João 3:16</p>
 			</div>
+
 			<div id="nome=equipe" class="form">
 				<input class="question" name="response" autocomplete="off" type="text" required />
 				<label for="name" class="label-response">
 					<span class="content-response">Nome da Equipe: </span>
 				</label>
 			</div>
-			<div id="nome" class="form">
-				<input class="question" name="response" autocomplete="off" type="text" required />
-				<label for="name" class="label-response">
-					<span class="content-response">Nome do Participante: </span>
-				</label>
-			</div>
+
 			<div id="question-1" class="form">
 				<input class="question" name="response" autocomplete="off" type="text" required />
 				<label for="name" class="label-response">
 					<span class="content-response">Seu versículo na primeira fase: </span>
 				</label>
 			</div>
+			
 			<div id="question-2" class="form">
 				<input class="question" name="response" autocomplete="off" type="text" required />
 				<label for="name" class="label-response">
 					<span class="content-response">Cantarei Para Sempre ... </span>
 				</label>
 			</div>
+			
 			<div id="question-3" class="form">
 				<input id="last-input" class="question" name="response" autocomplete="off" type="text" required />
 				<label for="name" class="label-response">
 					<span class="content-response">Sobre ele você pregou</span>
 				</label>
 			</div>
+			
 			<div id="question-4" class="form">
 				<input class="question" name="response" autocomplete="off" type="text" required />
 				<label for="name" class="label-response">
 					<span class="content-response">Nossa grande missão</span>
 				</label>
 			</div>
+
 			<input id="button" class="fixed" value="enviar" type="submit" onclick="verifyResponse()">
 
 			<script>
@@ -103,7 +106,7 @@
 					var count = 0;
 					var isComplete = false;
 					form.childNodes.forEach(function(item, i) {
-						if (i != 0 && i != 1 && (i % 2 != 0) && i < 14) {
+						if (i != 0 && i != 1 && (i % 2 != 0) && i < 12) {
 							console.log(item)
 							console.log(item.childNodes[1].value)
 							if (!item.childNodes[1].value == "") {
@@ -120,7 +123,7 @@
 							}
 						}
 					})
-					isComplete = count >= 6;
+					isComplete = count >= 5;
 					console.log("count: " + count);
 					if (isComplete) {
 						console.log("<p>" + responses + "</p>");
