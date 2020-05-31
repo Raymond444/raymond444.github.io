@@ -25,6 +25,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-direction: column;
 }
 
 #main {
@@ -43,12 +44,24 @@ h1 {
     font-size: 4em;
 }
 
+p {
+    font-family: 'Jost', sans-serif;
+    color: white;
+    font-size: 1.6em;
+}
+
+.p-form {
+    color: #5fa8d3;
+    font-size: 1.5em;
+}
+
 #div-image {
     position: relative;
     width: 50%;
     height: 100%;
     margin: 0 3%;
 }
+
 #image {
     margin: 0;
     width: 100%;
@@ -83,6 +96,10 @@ form {
     background: #00000000;
 }
 
+.div-info {
+    margin: 0 auto 5% auto;
+}
+
 /*form .fixed {
     width: 20%;
     top: 80%;
@@ -91,6 +108,17 @@ form {
     color: black;
 }
 */
+
+
+#button {
+    padding: 2%;
+    font-size: 1em;
+    color: #5fa8d3;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #5fa8d3;
+    border-radius: 10%;
+    cursor: pointer;
+}
 
 .form {
     width: 100%;
@@ -156,6 +184,7 @@ form {
 }
 
 
+
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 992px) {
     #main {
@@ -171,8 +200,9 @@ form {
     
     #div-image {
         position: relative;
-        width: 90%;
+        width: 80%;
         height: 100%;
+    
     }
 
     #iframe-questions {

@@ -3,7 +3,6 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<!--<meta name="viewport" content="width=device-widht, inital-scale=1.0" />-->
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<link rel="stylesheet" href="./styles/version2.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -12,19 +11,16 @@
 	<script>
 		$(document).ready(function(){
 			function r() {
-					var item = document.createElement("LI");
-					var a = document.createElement("a");
-					a.setAttribute("href", "https://www.youtube.com/?hl=pt&gl=BR")
-					a.setAttribute("target", "_blank")
-					var textItem = document.createTextNode("Water");
-					a.appendChild(textItem);
-					item.appendChild(a);
-					document.getElementById("myList").appendChild(item);
-				}
-			
-            function verifyResponses(form) {
-
+				var item = document.createElement("LI");
+				var a = document.createElement("a");
+				a.setAttribute("href", "https://www.youtube.com/?hl=pt&gl=BR")
+				a.setAttribute("target", "_blank")
+				var textItem = document.createTextNode("Water");
+				a.appendChild(textItem);
+				item.appendChild(a);
+				document.getElementById("myList").appendChild(item);
 			}
+			
 
 			function focusOn(questionNumber) {
 				console.log("question-" + questionNumber);
@@ -32,20 +28,6 @@
 				question.childNodes[1].focus();
 				question.childNodes[1].scrollIntoView();
 			}
-			
-			//var allArea = $("area");
-			//var i;
-			//for (i = 0; i < allArea.length; i++) {
-			//	allArea[i].addEventListener("click", function(e){
-			//		e.preventDefault();
-			//		
-			//		focusOn(i + 1)
-//
-//					//var iframe = document.getElementById("frame-question");
-//					//iframe.src = "question.html#question-3"
-//					//iframe.contentWindow.showButton();
-//				});
-//			}
 
 			$(".option").on("click", function(e) {
 				e.preventDefault();
@@ -59,6 +41,7 @@
 <body>
 	<header>
 		<h1>Gincana Diflen 2020</h1>
+		<p> Clique nas figuras da imagem para ser direcionado à sua dica </p>
 	</header>
 	<div id="main">
 		<div id="div-image">
@@ -67,69 +50,87 @@
 				<area id="1" class="option" shape="rect" coords="45,50,139,65"  href="" >
 				<area id="2" class="option" shape="rect" coords="56,238,131,253" href="" >
 				<area id="3" class="option" shape="rect" coords="390,49,503,96" href="" >
-				<!--<area shape="rect" coords="401,234,499,252" href="https://www.youtube.com/?hl=pt&gl=BR" target="janela">-->
+				<area id="4" class="option" shape="rect" coords="401,234,499,252" href="">
 			</map>
 		</div>
 		<div id="iframe-questions">
-			<!--<iframe  id="frame-question" src="./question.html" scrolling="no" name="janela"></iframe>-->
-			
-			<form action="#" onsubmit="verifyResponses(this)">
-				<div id="question-1" class="form">
-					<input class="question" name="response" autocomplete="off" type="text" required />
-					<label for="name" class="label-response">
-						<span class="content-response">1° Verso - Responda </span>
-					</label>
-				</div>
-				<div id="question-2" class="form">
-					<input class="question" name="response" autocomplete="off" type="text" required />
-					<label for="name" class="label-response">
-						<span class="content-response">2° Verso - Responda </span>
-					</label>
-				</div>
-				<div id="question-3" class="form">
-					<input id="last-input" class="question" name="response" autocomplete="off" type="text" required />
-					<label for="name" class="label-response">
-						<span class="content-response">3° Verso - Responda </span>
-					</label>
-				</div>
-				<div id="question-4" class="form">
-					<input class="question" name="response" autocomplete="off" type="text" required />
-					<label for="name" class="label-response">
-						<span class="content-response">4° Verso - Responda </span>
-					</label>
-				</div>
-				<div id="question-5" class="form">
-					<input class="question" name="response" autocomplete="off" type="text" required />
-					<label for="name" class="label-response">
-						<span class="content-response">5° Verso - Responda </span>
-					</label>
-				</div>
-				<div id="question-6" class="form">
-					<input id="last-input" class="question" name="response" autocomplete="off" type="text" required />
-					<label for="name" class="label-response">
-						<span class="content-response">6° Verso - Responda </span>
-					</label>
-				</div>
-				<div id="question-7" class="form">
-					<input class="question" name="response" autocomplete="off" type="text" required />
-					<label for="name" class="label-response">
-						<span class="content-response">7° Verso - Responda </span>
-					</label>
-				</div>
-				<div id="question-8" class="form">
-					<input class="question" name="response" autocomplete="off" type="text" required />
-					<label for="name" class="label-response">
-						<span class="content-response">8° Verso - Responda </span>
-					</label>
-				</div>
-				<div id="question-9" class="form">
-					<input id="last-input" class="question" name="response" autocomplete="off" type="text" required />
-					<label for="name" class="label-response">
-						<span class="content-response">9° Verso - Responda </span>
-					</label>
-				</div>
-				<input id="button" class="fixed" value="enviar" type="submit">
-			</form>
+			<div class="div-info">
+				<p class="p-form">Responda com as referências bíblicas, de acordo com as dicas abaixo:</p>
+				<p class="p-form">Siga exatamente esse modelo de resposta: João 3:16</p>
+			</div>
+			<div id="nome=equipe" class="form">
+				<input class="question" name="response" autocomplete="off" type="text" required />
+				<label for="name" class="label-response">
+					<span class="content-response">Nome da Equipe: </span>
+				</label>
+			</div>
+			<div id="nome" class="form">
+				<input class="question" name="response" autocomplete="off" type="text" required />
+				<label for="name" class="label-response">
+					<span class="content-response">Nome do Participante: </span>
+				</label>
+			</div>
+			<div id="question-1" class="form">
+				<input class="question" name="response" autocomplete="off" type="text" required />
+				<label for="name" class="label-response">
+					<span class="content-response">Seu versículo na primeira fase: </span>
+				</label>
+			</div>
+			<div id="question-2" class="form">
+				<input class="question" name="response" autocomplete="off" type="text" required />
+				<label for="name" class="label-response">
+					<span class="content-response">Cantarei Para Sempre ... </span>
+				</label>
+			</div>
+			<div id="question-3" class="form">
+				<input id="last-input" class="question" name="response" autocomplete="off" type="text" required />
+				<label for="name" class="label-response">
+					<span class="content-response">Sobre ele você pregou</span>
+				</label>
+			</div>
+			<div id="question-4" class="form">
+				<input class="question" name="response" autocomplete="off" type="text" required />
+				<label for="name" class="label-response">
+					<span class="content-response">Nossa grande missão</span>
+				</label>
+			</div>
+			<input id="button" class="fixed" value="enviar" type="submit" onclick="verifyResponse()">
+
+			<script>
+				function verifyResponse() {
+					var responses = "Equipe : ";
+					let form = document.getElementById("iframe-questions");
+					var count = 0;
+					var isComplete = false;
+					form.childNodes.forEach(function(item, i) {
+						if (i != 0 && i != 1 && (i % 2 != 0) && i < 14) {
+							console.log(item)
+							console.log(item.childNodes[1].value)
+							if (!item.childNodes[1].value == "") {
+								responses = (responses + item.childNodes[1].value + "  ");
+								
+								if (count == 0) {
+									responses = (responses + "|  Nome do Participante: ")
+								} else {
+									if (count < 5) {
+										responses = (responses + "|  Resposta da Pergunta " + count + "=>  ")
+									}
+								}
+								count++;
+							}
+						}
+					})
+					isComplete = count >= 6;
+					console.log("count: " + count);
+					if (isComplete) {
+						console.log("<p>" + responses + "</p>");
+						alert("Click em ok para enviar a sua resposta por email para a administração");
+						window.open('mailto:diflenbarrocaochurch@gmail.com?subject=Resposta Da Gincana&body=' + responses);
+					} else {
+						alert("Preencha todos os campos para finalizar");
+					}
+				}
+			</script>
 		</div>
 	</div>
 	<script>$('img[usemap]').rwdImageMaps();</script>
