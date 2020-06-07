@@ -52,8 +52,10 @@ p {
 }
 
 .p-form {
+    font-weight: 700;
     color: #5fa8d3;
     font-size: 1.5em;
+    
 }
 
 #div-image {
@@ -101,15 +103,6 @@ form {
     display: block;
     margin: 0 auto 5% auto;
 }
-
-/*form .fixed {
-    width: 20%;
-    top: 80%;
-    left: 40%;
-    position: fixed;
-    color: black;
-}
-*/
 
 #question-1,
 #question-2,
